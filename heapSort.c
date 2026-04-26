@@ -138,7 +138,9 @@ void MaxHeapify(int arr[], int n, int i, int heapSize){
     r = i * 2 + 1;
     largest = i; 
 
+    /* STAMPA INFO MAX-HEAPIFY
     printf("\nMAX-HEAPIFY SUL SOTTO ALBERO: radice %d, left %d, right %d", i, l, r);
+    */
 
     //Controlliamo che l e r abbiano indice all'interno della struttura heap, poi cerchiamo il valore più grande tra padre e figli, nel caso in cui uno dei figli era più grande scambiamo i valori e chiamiamo ricorsivamente la f
     if(l <= heapSize && arr[l] > arr[i]){
@@ -166,13 +168,12 @@ void BuildMaxHeap(int arr[], int n){
     }
 
     printf("\nCOTRUITO IL BUILD MAX-HEAP\n");
-
     printf("array BUILD-MAX-HEAP = [ ");
     for (int i=1; i < n; i++){
         printf("%d  ", arr[i]);
     }
     printf("]\n");
-
+    
 }
 
 void HeapSort(int arr[], int n){
