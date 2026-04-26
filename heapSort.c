@@ -40,10 +40,10 @@ int main(void){
     int v[n]; 
     v[0] = -1;
     
-    printf("\n* Premi 1 se vuoi riempire l'array con valori casuali.\n"); 
+    printf("\n* Premi 1 se vuoi riempire l'array con valori casuali (Range 0 - 1000).\n"); 
     printf("* Premi 2 se vuoi riempire l'array manualmente.\n");
     printf("* Premi qualsiasi altro numero per uscire dal programma.\n");
-    printf("L'ordinamento partira' in automatico!\n");
+    printf("* L'ordinamento partira' in automatico!\n");
     printf("Choice: ");  
     scanf("%d", &choice);
 
@@ -58,6 +58,7 @@ int main(void){
             break;
         
         default:
+            return 0;
             break; 
         
     }
@@ -67,7 +68,7 @@ int main(void){
     for (int i=1; i < n; i++){
         printf("%d  ", v[i]);
     }
-    printf("]");
+    printf("]\n\n");
 
 }
 
@@ -111,7 +112,7 @@ void RandomicInizialize(int arr[], int n){
     for (int i=1; i < n; i++){
         printf("%d  ", arr[i]);
     }
-    printf("]");
+    printf("]\n");
 
     // --- INIZIO ORDINAMENTO
     HeapSort(arr, n);
@@ -166,13 +167,12 @@ void BuildMaxHeap(int arr[], int n){
     for(int i = ((n-1)/2) ; i >= 1; i--){
         MaxHeapify(arr, n, i, heapSize);
     }
-
-    printf("\nCOTRUITO IL BUILD MAX-HEAP\n");
-    printf("array BUILD-MAX-HEAP = [ ");
+    
+    printf("\narray BUILD-MAX-HEAP = [ ");
     for (int i=1; i < n; i++){
         printf("%d  ", arr[i]);
     }
-    printf("]\n");
+    printf("]");
     
 }
 
@@ -192,4 +192,3 @@ void HeapSort(int arr[], int n){
     }
 
 }
-
