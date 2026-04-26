@@ -1,4 +1,5 @@
-*HEAP-SORT IN C*
+# **HEAP-SORT IN C**
+
 Il codice sorgente contiene l'algoritmo di ordinamento Heap-Sort.
 Una volta eseguito il programma è possibile: 
 - Scegliere la dimensione dell'array che si vuole ordinare
